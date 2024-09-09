@@ -1,0 +1,60 @@
+name: "➕ Add documentation"
+description: Request the addition of a new add-on to the documentation site.
+title: "Add groupId:artifactId"
+body:
+  - type: markdown
+    id: markdown
+    attributes:
+      value: "Requests can be made for either a groupId or a particular artifact belonging to that groupId. (Please edit the title accordingly.)"
+    validations:
+      required: false
+  - type: dropdown
+    id: repo-maven-central
+    attributes:
+      label: Is the add-on available on Maven Central repository?
+      description: "Indicate whether the add-on is published and available on https://repo1.maven.org/maven2"
+      options:
+        - "No"
+        - "Yes"
+      default: 0
+    validations:
+      required: true
+  - type: dropdown
+    id: repo-vaadin-repository
+    attributes:
+      label: Is the add-on available on Vaadin Add-ons repository?
+      description: "Indicate whether the add-on is published and available on https://maven.vaadin.com/vaadin-addons"
+      options:
+        - "No"
+        - "Yes"
+      default: 0
+    validations:
+      required: true
+  - type: input
+    id: snapshot-repository
+    attributes:
+      label: Snapshot repository
+      description: Specify the snapshot repository URL if available.
+    validations:
+      required: false
+  - type: dropdown
+    id: repo-vaadin-repositoriy
+    attributes:
+      label: Snapshot policy
+      description: If there is a snapshot repository, please specify which snapshots (if any) should be listed.
+      options:
+        - There is no snapshot repository.
+        - Only list snapshots if they are newer than the release versions.
+        - Only list snapshots if there is no newer release with the same MAJOR version.   
+        - Only list snapshots if there is no newer release with the same MINOR version.
+        - Only list snapshots if there is no release with the same PATCH version.
+      default: 0
+    validations:
+      required: true
+  - type: textarea
+    id: additional-information
+    attributes:
+      label: Additional information
+      description: "Any other context/information (additional repositories, etc.) can be added here." 
+    validations:
+      required: false

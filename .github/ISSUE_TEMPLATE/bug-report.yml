@@ -1,0 +1,27 @@
+name: "🐛 Bug Report"
+description: Report an issue related to the documentation site.
+body:
+  - type: markdown
+    id: markdown
+    attributes:
+      value: |
+          Bugs related to the add-ons (including documentation issues) must be reported to their own repository, which you can find linked in the [Vaadin Directory](https://vaadin.com/directory/).
+    validations:
+      required: false
+  - type: input
+    id: artifact
+    attributes:
+      label: Related Artifact
+      description: If the problem relates to a particular artifact, please specify the groupId and artifactId here.
+    validations:
+      required: false
+  - type: textarea
+    id: problem-description
+    attributes:
+      label: Describe the bug
+      description: Add a clear description of the issue you're experiencing.
+    validations:
+      required: true
+ 
+ 
+ 
