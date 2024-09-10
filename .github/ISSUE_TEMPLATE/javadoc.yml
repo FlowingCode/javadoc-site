@@ -5,7 +5,9 @@ body:
   - type: markdown
     id: markdown
     attributes:
-      value: "Requests can be made for either a groupId or a particular artifact belonging to that groupId. (Please edit the title accordingly.)"
+      value: "Requests can be made for either a groupId or a particular artifact belonging to that groupId. (Please edit the title accordingly.)
+      
+      Note: We can only host documentation for releases or snapshots that have been deployed to a Maven repository."
     validations:
       required: false
   - type: dropdown
