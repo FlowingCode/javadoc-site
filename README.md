@@ -11,6 +11,7 @@ If you would like us to host the Javadocs for your project, please [submit a req
 
 - On-Demand Retrieval: Fetches the most up-to-date Javadoc documentation as needed.
 - Multiple Version Support: Handles requests for various artifact versions and redirects to the latest version if no specific version is provided.
+- Multiple Repository Support: Supports artifacts released to any Maven repository.
 - Snapshot Support: Handles both releases and snapshot versions of artifacts.
 - Version Selector: Allows users to switch between different versions of the documentation.
 - Caching: Maintains a cache of artifact versions in geographically distributed data centers.
